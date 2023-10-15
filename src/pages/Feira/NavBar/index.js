@@ -14,12 +14,13 @@ export default function NavBar() {
       <Logo />
       <IconButton
       disabled = {quantidadeProdutos === 0}
+      onClick={() => navigate("/carrinho") 
+    }
       >
         <Badge
           color="primary"
           badgeContent={quantidadeProdutos}
-          onClick={() => navigate("/carrinho") 
-          }
+
         >
           <ShoppingCartIcon />
         </Badge>
