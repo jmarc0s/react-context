@@ -12,15 +12,16 @@ function Router() {
     return (
         <BrowserRouter>
             <UsuarioProvider >
+                <CarrinhoProvider>
                 <Routes>
 
                     <Route exact path="/" element={<Login />} />
 
 
                     <Route path="/feira" element={
-                        <CarrinhoProvider>
+                        
                         <Feira />
-                        </CarrinhoProvider>
+                        
                     } />
 
 
@@ -28,6 +29,7 @@ function Router() {
 
 
                 </Routes>
+                </CarrinhoProvider>
             </UsuarioProvider>
         </BrowserRouter>
     )
