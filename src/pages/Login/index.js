@@ -45,6 +45,7 @@ function Login() {
       <Button
         variant="contained"
         color="primary"
+        disabled={nome.length < 4}
         onClick={() => {
           navigate('/feira');
         }}
