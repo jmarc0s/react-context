@@ -14,6 +14,7 @@ function Router() {
         <BrowserRouter>
             <UsuarioProvider >
                 <CarrinhoProvider>
+                <PagamentoProvider>
                 <Routes>
 
                     <Route exact path="/" element={<Login />} />
@@ -27,12 +28,13 @@ function Router() {
 
 
                     <Route path="/carrinho" element={
-                    <PagamentoProvider>
+                    
                         <Carrinho />
-                    </PagamentoProvider>} />
+                    } />
 
 
                 </Routes>
+                </PagamentoProvider>
                 </CarrinhoProvider>
             </UsuarioProvider>
         </BrowserRouter>
