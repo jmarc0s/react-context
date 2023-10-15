@@ -4,6 +4,7 @@ import Login from 'pages/Login';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { UsuarioProvider } from 'common/context/Usuario';
 import { CarrinhoProvider } from 'common/context/Carrinho';
+import { PagamentoProvider } from 'common/context/Pagamento';
 
 
 function Router() {
@@ -25,7 +26,10 @@ function Router() {
                     } />
 
 
-                    <Route path="/carrinho" element={<Carrinho />} />
+                    <Route path="/carrinho" element={
+                    <PagamentoProvider>
+                        <Carrinho />
+                    </PagamentoProvider>} />
 
 
                 </Routes>
